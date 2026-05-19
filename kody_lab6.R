@@ -16,7 +16,7 @@ library(dunn.test)
 
 install.packages("FSA")
 library(FSA)
-
+setwd("C/Users/HP/OneDrive/PROJEKT-analiza_statystyczna")
 ##################################################
 
 dane <- read.csv2("przykladoweDaneZBrakami.csv", sep = ";")
