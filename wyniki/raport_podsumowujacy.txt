@@ -1,0 +1,259 @@
+RAPORT PODSUMOWUJACY - PROJEKT SAD
+==================================
+
+Plik danych: przykladoweDane-Projekt.csv 
+Liczba wierszy: 75 
+Liczba kolumn: 11 
+
+1. Braki danych
+      kolumna liczba_brakow
+grupa   grupa             0
+plec     plec             0
+wiek     wiek             0
+hsCRP   hsCRP             0
+ERY       ERY             0
+PLT       PLT             0
+HGB       HGB             2
+HCT       HCT             0
+MCHC     MCHC             0
+MON       MON             1
+LEU       LEU             0
+
+Dokladne braki
+  wiersz kolumna
+1     13     HGB
+2     68     HGB
+3      5     MON
+
+Raport imputacji
+  wiersz kolumna    grupa nowa_wartosc                  metoda
+1     68     HGB KONTROLA   11.2635750 srednia w obrebie grupy
+2     13     HGB    CHOR1   12.4114125 srednia w obrebie grupy
+3      5     MON    CHOR1    0.8579167 srednia w obrebie grupy
+
+2. Wartosci odstajace
+   parametr wiersz    grupa  wartosc dolna_granica gorna_granica
+1      wiek     55 KONTROLA  48.0000     14.500000      46.50000
+2     hsCRP      9    CHOR1  20.1548     -5.139805      14.66475
+3     hsCRP     13    CHOR1  16.4069     -5.139805      14.66475
+4     hsCRP     15    CHOR1  42.6499     -5.139805      14.66475
+5     hsCRP     38    CHOR2  19.2124     -5.139805      14.66475
+6       ERY     23    CHOR1  33.0000      2.965000       5.32500
+7       PLT     36    CHOR2 456.0000     72.000000     356.00000
+8       PLT     51 KONTROLA 434.0000     72.000000     356.00000
+9       HGB     44    CHOR2  22.2318      8.602069      15.71732
+10      HCT     29    CHOR2   0.0423      0.251000       0.46300
+11     MCHC     32    CHOR2  38.8674     32.389500      37.70470
+12     MCHC     48    CHOR2  38.2030     32.389500      37.70470
+13     MCHC     51 KONTROLA  32.0573     32.389500      37.70470
+14     MCHC     73 KONTROLA  32.2234     32.389500      37.70470
+15      MON     13    CHOR1   1.5000      0.182500       1.32250
+16      MON     15    CHOR1   1.5200      0.182500       1.32250
+17      MON     26    CHOR2   0.1400      0.182500       1.32250
+18      MON     38    CHOR2   1.6100      0.182500       1.32250
+19      MON     48    CHOR2   7.0000      0.182500       1.32250
+
+3. Statystyki opisowe
+    grupa parametr liczba srednia     sd mediana     min     max    IQR
+ KONTROLA     wiek     25  32.320  5.610  32.000  23.000  48.000  6.000
+    CHOR1     wiek     25  29.560  5.881  29.000  17.000  43.000  6.000
+    CHOR2     wiek     25  30.040  5.898  30.000  21.000  42.000  8.000
+ KONTROLA    hsCRP     25   5.295  3.997   4.220   0.758  14.395  4.550
+    CHOR1    hsCRP     25   6.103  8.825   3.966   0.488  42.650  2.671
+    CHOR2    hsCRP     25   5.536  4.646   3.445   0.335  19.212  6.531
+ KONTROLA      ERY     25   4.013  0.457   3.980   3.090   5.050  0.510
+    CHOR1      ERY     25   5.363  5.767   4.200   3.530  33.000  0.440
+    CHOR2      ERY     25   4.198  0.465   4.270   3.250   5.040  0.580
+ KONTROLA      PLT     25 225.880 63.813 214.000 147.000 434.000 66.000
+    CHOR1      PLT     25 225.280 54.223 217.000 128.000 336.000 87.000
+    CHOR2      PLT     25 209.120 75.223 195.000  91.000 456.000 51.000
+ KONTROLA      HGB     25  11.264  1.059  11.438   9.505  13.210  1.289
+    CHOR1      HGB     25  12.411  1.192  12.405   9.505  14.499  1.289
+    CHOR2      HGB     25  12.806  2.373  12.566   9.827  22.232  1.933
+ KONTROLA      HCT     25   0.338  0.030   0.339   0.279   0.389  0.033
+    CHOR1      HCT     25   0.364  0.031   0.363   0.280   0.405  0.036
+    CHOR2      HCT     25   0.346  0.073   0.360   0.042   0.412  0.060
+ KONTROLA     MCHC     25  34.403  1.120  34.549  32.057  36.044  1.495
+    CHOR1     MCHC     25  35.129  0.878  35.047  32.556  36.874  0.880
+    CHOR2     MCHC     25  35.552  1.291  35.545  32.888  38.867  1.163
+ KONTROLA      MON     25   0.760  0.188   0.760   0.350   1.250  0.210
+    CHOR1      MON     25   0.858  0.293   0.760   0.480   1.520  0.460
+    CHOR2      MON     25   0.953  1.298   0.660   0.140   7.000  0.330
+ KONTROLA      LEU     25  11.360  3.081  10.680   4.830  17.460  4.370
+    CHOR1      LEU     25  12.022  2.582  11.660   6.790  16.810  4.370
+    CHOR2      LEU     25  12.038  2.318  12.000   7.950  16.590  2.640
+
+4. Shapiro-Wilk
+   parametr    grupa       W p_value normalnosc
+1      wiek KONTROLA 0.95515 0.32635        TAK
+2      wiek    CHOR1 0.96914 0.62335        TAK
+3      wiek    CHOR2 0.95698 0.35754        TAK
+4     hsCRP KONTROLA 0.88130 0.00735        NIE
+5     hsCRP    CHOR1 0.54185 0.00000        NIE
+6     hsCRP    CHOR2 0.87311 0.00500        NIE
+7       ERY KONTROLA 0.96928 0.62678        TAK
+8       ERY    CHOR1 0.24940 0.00000        NIE
+9       ERY    CHOR2 0.98155 0.91395        TAK
+10      PLT KONTROLA 0.86758 0.00387        NIE
+11      PLT    CHOR1 0.96629 0.55321        TAK
+12      PLT    CHOR2 0.86367 0.00324        NIE
+13      HGB KONTROLA 0.95897 0.39441        TAK
+14      HGB    CHOR1 0.96434 0.50738        TAK
+15      HGB    CHOR2 0.75133 0.00004        NIE
+16      HCT KONTROLA 0.96854 0.60841        TAK
+17      HCT    CHOR1 0.94685 0.21267        TAK
+18      HCT    CHOR2 0.67358 0.00000        NIE
+19     MCHC KONTROLA 0.95173 0.27415        TAK
+20     MCHC    CHOR1 0.94806 0.22662        TAK
+21     MCHC    CHOR2 0.95236 0.28326        TAK
+22      MON KONTROLA 0.95908 0.39642        TAK
+23      MON    CHOR1 0.91041 0.03112        NIE
+24      MON    CHOR2 0.40990 0.00000        NIE
+25      LEU KONTROLA 0.97960 0.87713        TAK
+26      LEU    CHOR1 0.95543 0.33103        TAK
+27      LEU    CHOR2 0.96882 0.61527        TAK
+
+5. Levene
+  parametr p_value jednorodnosc
+1     wiek 0.73309          TAK
+2    hsCRP 0.79073          TAK
+3      ERY 0.43039          TAK
+4      PLT 0.93751          TAK
+5      HGB 0.15937          TAK
+6      HCT 0.12370          TAK
+7     MCHC 0.26890          TAK
+8      MON 0.26328          TAK
+9      LEU 0.35921          TAK
+
+6. Analiza porownawcza
+  parametr           test p_value         interpretacja
+1     wiek          ANOVA 0.20563 brak istotnych roznic
+2    hsCRP Kruskal-Wallis 0.88072 brak istotnych roznic
+3      ERY Kruskal-Wallis 0.15435 brak istotnych roznic
+4      PLT Kruskal-Wallis 0.32403 brak istotnych roznic
+5      HGB Kruskal-Wallis 0.00077    sa istotne roznice
+6      HCT Kruskal-Wallis 0.01896    sa istotne roznice
+7     MCHC          ANOVA 0.00186    sa istotne roznice
+8      MON Kruskal-Wallis 0.25421 brak istotnych roznic
+9      LEU          ANOVA 0.59650 brak istotnych roznic
+
+7. Informacja o post-hoc
+  parametr test_posthoc                   plik
+1      HGB         Dunn   posthoc_Dunn_HGB.csv
+2      HCT         Dunn   posthoc_Dunn_HCT.csv
+3     MCHC     TukeyHSD posthoc_Tukey_MCHC.csv
+
+8. Chi-kwadrat
+         test p_value                       interpretacja
+1 chi-kwadrat 0.80712 brak istotnej zaleznosci grupa-plec
+
+9. Korelacje Spearmana
+       grupa parametr_1 parametr_2   metoda        r p_value istotna kierunek                  sila
+1   KONTROLA       wiek      hsCRP Spearman -0.19799 0.34276     NIE   ujemna brak lub bardzo slaba
+2   KONTROLA       wiek        ERY Spearman  0.56382 0.00333     TAK dodatnia                 silna
+3   KONTROLA       wiek        PLT Spearman  0.26351 0.20310     NIE dodatnia                 slaba
+4   KONTROLA       wiek        HGB Spearman  0.22433 0.28102     NIE dodatnia                 slaba
+5   KONTROLA       wiek        HCT Spearman  0.33263 0.10424     NIE dodatnia           umiarkowana
+6   KONTROLA       wiek       MCHC Spearman -0.40843 0.04266     TAK   ujemna           umiarkowana
+7   KONTROLA       wiek        MON Spearman -0.06354 0.76286     NIE   ujemna brak lub bardzo slaba
+8   KONTROLA       wiek        LEU Spearman -0.51563 0.00834     TAK   ujemna                 silna
+9   KONTROLA      hsCRP        ERY Spearman  0.28901 0.16116     NIE dodatnia                 slaba
+10  KONTROLA      hsCRP        PLT Spearman  0.13159 0.53066     NIE dodatnia brak lub bardzo slaba
+11  KONTROLA      hsCRP        HGB Spearman  0.18963 0.36393     NIE dodatnia brak lub bardzo slaba
+12  KONTROLA      hsCRP        HCT Spearman  0.24048 0.24690     NIE dodatnia                 slaba
+13  KONTROLA      hsCRP       MCHC Spearman -0.20351 0.32921     NIE   ujemna                 slaba
+14  KONTROLA      hsCRP        MON Spearman -0.00577 0.97815     NIE   ujemna brak lub bardzo slaba
+15  KONTROLA      hsCRP        LEU Spearman  0.42538 0.03401     TAK dodatnia           umiarkowana
+16  KONTROLA        ERY        PLT Spearman  0.45428 0.02253     TAK dodatnia           umiarkowana
+17  KONTROLA        ERY        HGB Spearman  0.51755 0.00806     TAK dodatnia                 silna
+18  KONTROLA        ERY        HCT Spearman  0.67873 0.00019     TAK dodatnia                 silna
+19  KONTROLA        ERY       MCHC Spearman -0.51080 0.00907     TAK   ujemna                 silna
+20  KONTROLA        ERY        MON Spearman -0.13210 0.52905     NIE   ujemna brak lub bardzo slaba
+21  KONTROLA        ERY        LEU Spearman -0.14085 0.50187     NIE   ujemna brak lub bardzo slaba
+22  KONTROLA        PLT        HGB Spearman  0.31560 0.12435     NIE dodatnia           umiarkowana
+23  KONTROLA        PLT        HCT Spearman  0.37837 0.06218     NIE dodatnia           umiarkowana
+24  KONTROLA        PLT       MCHC Spearman -0.32466 0.11333     NIE   ujemna           umiarkowana
+25  KONTROLA        PLT        MON Spearman  0.14786 0.48059     NIE dodatnia brak lub bardzo slaba
+26  KONTROLA        PLT        LEU Spearman  0.12736 0.54408     NIE dodatnia brak lub bardzo slaba
+27  KONTROLA        HGB        HCT Spearman  0.91672 0.00000     TAK dodatnia          bardzo silna
+28  KONTROLA        HGB       MCHC Spearman  0.24372 0.24038     NIE dodatnia                 slaba
+29  KONTROLA        HGB        MON Spearman -0.27541 0.18270     NIE   ujemna                 slaba
+30  KONTROLA        HGB        LEU Spearman -0.31914 0.11995     NIE   ujemna           umiarkowana
+31  KONTROLA        HCT       MCHC Spearman -0.08367 0.69090     NIE   ujemna brak lub bardzo slaba
+32  KONTROLA        HCT        MON Spearman -0.22314 0.28364     NIE   ujemna                 slaba
+33  KONTROLA        HCT        LEU Spearman -0.33013 0.10703     NIE   ujemna           umiarkowana
+34  KONTROLA       MCHC        MON Spearman  0.00058 0.99781     NIE dodatnia brak lub bardzo slaba
+35  KONTROLA       MCHC        LEU Spearman  0.04587 0.82766     NIE dodatnia brak lub bardzo slaba
+36  KONTROLA        MON        LEU Spearman  0.38722 0.05583     NIE dodatnia           umiarkowana
+37     CHOR1       wiek      hsCRP Spearman  0.21609 0.29952     NIE dodatnia                 slaba
+38     CHOR1       wiek        ERY Spearman -0.10017 0.63377     NIE   ujemna brak lub bardzo slaba
+39     CHOR1       wiek        PLT Spearman  0.20027 0.33712     NIE dodatnia                 slaba
+40     CHOR1       wiek        HGB Spearman -0.12297 0.55814     NIE   ujemna brak lub bardzo slaba
+41     CHOR1       wiek        HCT Spearman -0.12201 0.56125     NIE   ujemna brak lub bardzo slaba
+42     CHOR1       wiek       MCHC Spearman -0.31902 0.12010     NIE   ujemna           umiarkowana
+43     CHOR1       wiek        MON Spearman -0.16104 0.44190     NIE   ujemna brak lub bardzo slaba
+44     CHOR1       wiek        LEU Spearman  0.04669 0.82461     NIE dodatnia brak lub bardzo slaba
+45     CHOR1      hsCRP        ERY Spearman  0.17122 0.41316     NIE dodatnia brak lub bardzo slaba
+46     CHOR1      hsCRP        PLT Spearman -0.05846 0.78133     NIE   ujemna brak lub bardzo slaba
+47     CHOR1      hsCRP        HGB Spearman -0.12141 0.56318     NIE   ujemna brak lub bardzo slaba
+48     CHOR1      hsCRP        HCT Spearman -0.13546 0.51852     NIE   ujemna brak lub bardzo slaba
+49     CHOR1      hsCRP       MCHC Spearman  0.14578 0.48687     NIE dodatnia brak lub bardzo slaba
+50     CHOR1      hsCRP        MON Spearman  0.38183 0.05963     NIE dodatnia           umiarkowana
+51     CHOR1      hsCRP        LEU Spearman  0.26769 0.19577     NIE dodatnia                 slaba
+52     CHOR1        ERY        PLT Spearman  0.14544 0.48789     NIE dodatnia brak lub bardzo slaba
+53     CHOR1        ERY        HGB Spearman  0.64430 0.00051     TAK dodatnia                 silna
+54     CHOR1        ERY        HCT Spearman  0.61501 0.00107     TAK dodatnia                 silna
+55     CHOR1        ERY       MCHC Spearman  0.36999 0.06869     NIE dodatnia           umiarkowana
+56     CHOR1        ERY        MON Spearman -0.34790 0.08835     NIE   ujemna           umiarkowana
+57     CHOR1        ERY        LEU Spearman  0.06656 0.75190     NIE dodatnia brak lub bardzo slaba
+58     CHOR1        PLT        HGB Spearman -0.18154 0.38514     NIE   ujemna brak lub bardzo slaba
+59     CHOR1        PLT        HCT Spearman -0.12007 0.56753     NIE   ujemna brak lub bardzo slaba
+60     CHOR1        PLT       MCHC Spearman -0.22985 0.26903     NIE   ujemna                 slaba
+61     CHOR1        PLT        MON Spearman -0.05312 0.80091     NIE   ujemna brak lub bardzo slaba
+62     CHOR1        PLT        LEU Spearman  0.11769 0.57528     NIE dodatnia brak lub bardzo slaba
+63     CHOR1        HGB        HCT Spearman  0.93618 0.00000     TAK dodatnia          bardzo silna
+64     CHOR1        HGB       MCHC Spearman  0.58357 0.00220     TAK dodatnia                 silna
+65     CHOR1        HGB        MON Spearman -0.26538 0.19980     NIE   ujemna                 slaba
+66     CHOR1        HGB        LEU Spearman  0.02197 0.91698     NIE dodatnia brak lub bardzo slaba
+67     CHOR1        HCT       MCHC Spearman  0.41752 0.03783     TAK dodatnia           umiarkowana
+68     CHOR1        HCT        MON Spearman -0.27248 0.18758     NIE   ujemna                 slaba
+69     CHOR1        HCT        LEU Spearman -0.03964 0.85078     NIE   ujemna brak lub bardzo slaba
+70     CHOR1       MCHC        MON Spearman  0.12254 0.55953     NIE dodatnia brak lub bardzo slaba
+71     CHOR1       MCHC        LEU Spearman  0.16737 0.42389     NIE dodatnia brak lub bardzo slaba
+72     CHOR1        MON        LEU Spearman  0.37452 0.06511     NIE dodatnia           umiarkowana
+73     CHOR2       wiek      hsCRP Spearman -0.10035 0.63318     NIE   ujemna brak lub bardzo slaba
+74     CHOR2       wiek        ERY Spearman  0.13916 0.50705     NIE dodatnia brak lub bardzo slaba
+75     CHOR2       wiek        PLT Spearman -0.20699 0.32082     NIE   ujemna                 slaba
+76     CHOR2       wiek        HGB Spearman  0.28342 0.16978     NIE dodatnia                 slaba
+77     CHOR2       wiek        HCT Spearman  0.05643 0.78878     NIE dodatnia brak lub bardzo slaba
+78     CHOR2       wiek       MCHC Spearman  0.09610 0.64771     NIE dodatnia brak lub bardzo slaba
+79     CHOR2       wiek        MON Spearman -0.05579 0.79110     NIE   ujemna brak lub bardzo slaba
+80     CHOR2       wiek        LEU Spearman -0.29686 0.14958     NIE   ujemna                 slaba
+81     CHOR2      hsCRP        ERY Spearman  0.10044 0.63285     NIE dodatnia brak lub bardzo slaba
+82     CHOR2      hsCRP        PLT Spearman  0.23407 0.26009     NIE dodatnia                 slaba
+83     CHOR2      hsCRP        HGB Spearman -0.03202 0.87925     NIE   ujemna brak lub bardzo slaba
+84     CHOR2      hsCRP        HCT Spearman -0.01002 0.96210     NIE   ujemna brak lub bardzo slaba
+85     CHOR2      hsCRP       MCHC Spearman -0.10954 0.60219     NIE   ujemna brak lub bardzo slaba
+86     CHOR2      hsCRP        MON Spearman -0.00308 0.98834     NIE   ujemna brak lub bardzo slaba
+87     CHOR2      hsCRP        LEU Spearman  0.11699 0.57758     NIE dodatnia brak lub bardzo slaba
+88     CHOR2        ERY        PLT Spearman  0.08009 0.70352     NIE dodatnia brak lub bardzo slaba
+89     CHOR2        ERY        HGB Spearman  0.88310 0.00000     TAK dodatnia          bardzo silna
+90     CHOR2        ERY        HCT Spearman  0.75145 0.00001     TAK dodatnia          bardzo silna
+91     CHOR2        ERY       MCHC Spearman  0.00000 1.00000     NIE     brak brak lub bardzo slaba
+92     CHOR2        ERY        MON Spearman -0.33648 0.10005     NIE   ujemna           umiarkowana
+93     CHOR2        ERY        LEU Spearman  0.26597 0.19876     NIE dodatnia                 slaba
+94     CHOR2        PLT        HGB Spearman -0.06021 0.77496     NIE   ujemna brak lub bardzo slaba
+95     CHOR2        PLT        HCT Spearman  0.04857 0.81765     NIE dodatnia brak lub bardzo slaba
+96     CHOR2        PLT       MCHC Spearman -0.51937 0.00780     TAK   ujemna                 silna
+97     CHOR2        PLT        MON Spearman -0.03389 0.87223     NIE   ujemna brak lub bardzo slaba
+98     CHOR2        PLT        LEU Spearman  0.21217 0.30859     NIE dodatnia                 slaba
+99     CHOR2        HGB        HCT Spearman  0.73696 0.00003     TAK dodatnia          bardzo silna
+100    CHOR2        HGB       MCHC Spearman  0.21207 0.30882     NIE dodatnia                 slaba
+101    CHOR2        HGB        MON Spearman -0.37237 0.06679     NIE   ujemna           umiarkowana
+102    CHOR2        HGB        LEU Spearman  0.30131 0.14328     NIE dodatnia           umiarkowana
+103    CHOR2        HCT       MCHC Spearman  0.08799 0.67579     NIE dodatnia brak lub bardzo slaba
+104    CHOR2        HCT        MON Spearman -0.17653 0.39861     NIE   ujemna brak lub bardzo slaba
+105    CHOR2        HCT        LEU Spearman  0.27129 0.18960     NIE dodatnia                 slaba
+106    CHOR2       MCHC        MON Spearman -0.28694 0.16432     NIE   ujemna                 slaba
+107    CHOR2       MCHC        LEU Spearman  0.10047 0.63277     NIE dodatnia brak lub bardzo slaba
+108    CHOR2        MON        LEU Spearman -0.10010 0.63403     NIE   ujemna brak lub bardzo slaba

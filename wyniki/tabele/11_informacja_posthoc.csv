@@ -1,0 +1,4 @@
+"parametr";"test_posthoc";"plik"
+"HGB";"Dunn";"posthoc_Dunn_HGB.csv"
+"HCT";"Dunn";"posthoc_Dunn_HCT.csv"
+"MCHC";"TukeyHSD";"posthoc_Tukey_MCHC.csv"
